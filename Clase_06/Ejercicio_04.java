@@ -19,36 +19,36 @@ public class Ejercicio_04 {
 
         int numeroAleatorio = random.nextInt((rangoMaximo - rangoMinimo) + 1) + rangoMinimo;
 
-        String eleccionCompu = elejirOpcion(numeroAleatorio);
+        String eleccionCompu = elegirOpcion(numeroAleatorio);
 
         System.out.println("Ingrese su eleccion:");
         System.out.println("1) Piedra");
         System.out.println("2) Papel");
         System.out.println("3) Tijeras");
         Scanner scan = new Scanner(System.in);
-        System.out.print("Escriba un numero entre (1 y 3): ");
+        System.out.print("Escriba un numero entre (1 al 3): ");
         int numeroUsuario = scan.nextInt();
 
-        String eleccionUsuario = elejirOpcion(numeroUsuario);
+        String eleccionUsuario = elegirOpcion(numeroUsuario);
 
-        if (eleccionUsuario == eleccionCompu) {
+        if (eleccionUsuario.equals(eleccionCompu)) {
             System.out.println("Vuelve a intentarlo...");
-        } else if (eleccionUsuario == "Piedra" && eleccionCompu == "Tijeras") {
+        } else if (eleccionUsuario.equals("Piedra") && eleccionCompu.equals("Tijeras")) {
             System.out.println("Gana Usuario!!!");
-        } else if (eleccionUsuario == "Piedra" && eleccionCompu == "Papel") {
+        } else if (eleccionUsuario.equals("Piedra") && eleccionCompu.equals("Papel")) {
             System.out.println("Gana Computadora!!!");
-        } else if (eleccionUsuario == "Papel" && eleccionCompu == "Piedra") {
+        } else if (eleccionUsuario.equals("Papel") && eleccionCompu.equals("Piedra")) {
             System.out.println("Gana Usuario!!!");
-        } else if (eleccionUsuario == "Papel" && eleccionCompu == "Tijeras") {
+        } else if (eleccionUsuario.equals("Papel") && eleccionCompu.equals("Tijeras")) {
             System.out.println("Gana Computadora!!!");
-        } else if (eleccionUsuario == "Tijeras" && eleccionCompu == "Piedra") {
+        } else if (eleccionUsuario.equals("Tijeras") && eleccionCompu.equals("Piedra")) {
             System.out.println("Gana Computadora!!!");
-        } else if (eleccionUsuario == "Tijeras" && eleccionCompu == "Papel") {
+        } else if (eleccionUsuario.equals("Tijeras") && eleccionCompu.equals("Papel")) {
             System.out.println("Gana Usuario!!!");
         }
     }
 
-    private static String elejirOpcion(int numero) {
+    private static String elegirOpcion(int numero) {
         String opcion = "";
         if (numero == 1) {
             opcion = "Piedra";
